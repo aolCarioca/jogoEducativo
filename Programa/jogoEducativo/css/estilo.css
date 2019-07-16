@@ -1,0 +1,108 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+body{
+    background-image: url("../imagens/fundo3.jpg");
+    background-position: 50% 70%;
+    color: fuchsia;
+    font-family: Arial, Helvetica, sans-serif   
+}
+
+input[type=email]{
+    display: block;
+    height: 40px;
+    width: 360px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 1px solid green;
+    font-size: 16pt;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255, 0.01);
+    outline: none;
+
+}
+
+input[type=password]{
+    display: block;
+    height: 40px;
+    width: 360px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 1px solid green;
+    font-size: 16pt;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255, 0.01);
+    outline: none;
+
+}
+input[type=submit]{
+    display: block;
+    height: 55px;
+    width: 400px;
+    margin: 10px;
+    border-radius: 30px;
+    background-color: #FF0066;
+    border: none;
+    font-size: 16pt;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: orangered;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: orangered;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color:orangered;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: orangered;
+  }
+
+input[type=text]{
+    display: block;
+    height: 40px;
+    width: 360px;
+    margin: 10px;
+    border-radius: 30px;
+    border: 1px solid green;
+    font-size: 16pt;
+    padding: 10px 20px;
+    background-color: rgb(255, 255, 255, 0.01);
+    outline: none;
+} 
+
+
+div#corpo-form{
+    /*background-color: red;*/
+    width: 420px;
+    margin: 130px auto 0px auto;
+}
+
+div#corpo-form-Cad{
+    /*background-color: red;*/
+    width: 420px;
+    margin: 80px auto 0px auto;
+
+}    
+
+div#corpo-form h1, div#corpo-form-Cad{
+    text-align: center;
+    padding: 20px;
+}
+
+a{
+    color: blue;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
