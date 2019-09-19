@@ -33,36 +33,55 @@ if (isset($_POST['nome_prof']))
     $email          = addslashes($_POST['email']);
     $senha          = addslashes($_POST['senha']);
     $confirmarSenha = addslashes($_POST['confSenha']);
+  
     //verifica se está preenchido
-    if(!empty(nome_prof) && !empty(email) && !empty(
-        senha) && !empty(confirmarSenha))
+    if(!empty($nome_prof) && !empty($email) && !empty($senha) && !empty($confirmarSenha))
     {
-        $u->conectar("db_jogo_velha_mat","localhost","root","123456");
+        $u->conectar("der_jogo_velha_mat","localhost","root","");
         if($u->msgErro == "")//se está tudo ok
         {
             if($senha == $confirmarSenha)
             {
                 if($u->cadastrar($nome_prof, $email, $senha))
                 {
-                    echo "Cadastrado com sucesso! Acesse para entrar!";
+                    ?>
+                    <div id="msg-sucesso">
+                    Cadastrado com sucesso! Acesse para entrar!
+                    </div>
+                    <?php
                 }
                 else
                 {
-                    echo "E-mail já cadastrado!";
+                    ?>
+                    <div class="msg-erro">
+                        E-mail já cadastrado!
+                    </div>
+                    <?php
                 }
             }
             else
             {
-                echo "Senha e confirmar senha não correspondem";
+                ?>
+                <div class="msg-erro">
+                    Senha e confirmar senha não correspondem
+                </div>
+                <?php
             }
         } 
         else
         {
-            echo "Erro: ".$u->msgErro;
+            ?>
+            <div class="msg-erro">
+                <?php echo "Erro: ".$u->msgErro;?>
+            <?php
         }
     } else
     {
-        echo "Preencha todos os campos!";
+        ?>
+        <div class="msg-erro">
+            Preencha todos os campos!
+        </div>
+        <?php    
     }   
 
 }
